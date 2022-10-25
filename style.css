@@ -20,7 +20,7 @@ body {
 .welcome_text {
     position: relative;
     text-align: center;
-    top: 150px;
+    margin-top: 150px;
 }
 
 .welcome_text h1 {
@@ -62,7 +62,7 @@ body {
 .insert_words {
     position: relative;
     text-align: center;
-    top: 350px;
+    margin-top: 250px;
 }
 
 #btn_insert_words {
@@ -73,6 +73,67 @@ body {
     display: none;
 }
 
+/**** Practice ****/
 
+.practice {
+    position: relative;
+    text-align: center;
+    margin-top: 250px;
+}
 
+/**** Word List ****/
 
+.word_list {
+    position: relative;
+    text-align: center;
+    margin-top: 250px;
+}
+
+/**** Footer ****/
+
+.footer_section {
+    margin-top: 250px;
+    text-align: center;
+}
+
+.footer_text span {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footer_text a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.footer_text a:hover {
+    color: orange;
+}
+
+.footer_text p {
+    margin-top: 10px;
+}
+
+.icons {
+    text-align: center;
+    padding: 11px 14px;
+    background: black;
+    border-radius: 50px;
+    color: white;
+    width: 65px;
+    height: 65px;
+    text-align: center;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.icons:hover {
+    background: orange;
+}
+
+.copyright {
+    position: relative;
+    padding-top: 140px;
+    text-align: center;
+}
