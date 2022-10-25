@@ -31,15 +31,30 @@ body {
 
 /**** Btns styles ****/
 
-.btn a {
-    text-decoration: none;
+.btn p {
+    margin-top: 25px;
     color: black;
-    font-size: 20px;
+    font-size: 25px;
+    cursor: pointer;
 }
 
-.btn a:hover {
+.btn p:hover {
     opacity: 0.7;
     color: orange;
+}
+
+/**** Inputs styles ****/
+
+.input input {
+    font-size: 20px;
+    padding: 10px 5px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    width: 350px;
+}
+
+.input input:focus {
+    outline-color: orange;
 }
 
 /**** Insert words ****/
@@ -50,9 +65,14 @@ body {
     top: 350px;
 }
 
-.btn_insert_words {
+#btn_insert_words {
     display: block;
 }
+
+#input_insert_words {
+    display: none;
+}
+
 
 
 

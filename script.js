@@ -1,3 +1,4 @@
+
 /**** Welcome Text ****/
 
 const heading = document.getElementById("text");
@@ -23,3 +24,15 @@ function printText(){
 printText();
 
 /**** Insert Words Btn ****/
+
+let insert_btn = document.getElementById("btn_insert_words");
+
+let insert_input = document.getElementById("input_insert_words");
+
+insert_btn.onclick = function(){
+    insert_btn.style.display = "none";
+
+    if(insert_btn.style.display == "none") {
+        insert_input.style.display = "block";
+    }
+}
