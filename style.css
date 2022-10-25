@@ -101,6 +101,62 @@ body {
     margin-top: 250px;
 }
 
+#btn_practice_open {
+    display: block;
+}
+
+#practice_window {
+    display: none;
+}
+
+/* First Practice */
+
+.flip_box {
+    background-color: transparent;
+    width: 350px;
+    height: 100px;
+    border: 1px solid grey;
+    perspective: 1000px;
+    cursor: pointer;
+    margin-left: 35%;
+}
+
+.flip_box_inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip_box:hover .flip_box_inner {
+    transform: rotateX(180deg);
+}
+
+.flip_box_front, .flip_box_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip_box_front {
+    background-color: black;
+    color: orange;
+}
+
+.flip_box_front, .flip_box_back {
+    padding-top: 35px;
+}
+
+.flip_box_back {
+    background-color: orange;
+    color: black;
+    transform: rotateX(180deg);
+}
+
 /**** Word List ****/
 
 .word_list {

@@ -49,3 +49,28 @@ insert_btn.onclick = function(){
     }
 }
 
+/**** Practice ****/
+
+let practice_btn = document.getElementById("btn_practice_open");
+
+let practice_window = document.getElementById("practice_window");
+
+practice_btn.onclick = function(){
+    practice_btn.style.display = "none";
+
+    if(practice_btn.style.display == "none") {
+        practice_window.style.display = "block";
+    }
+
+    /**** Cross Fce ****/
+
+    let cross = document.getElementById("cross1");
+
+    cross.onclick = function(){
+        practice_window.style.display = "none";
+
+        if(practice_window.style.display == "none") {
+            practice_btn.style.display = "block";
+        }
+    }
+}
