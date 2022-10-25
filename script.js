@@ -35,4 +35,17 @@ insert_btn.onclick = function(){
     if(insert_btn.style.display == "none") {
         insert_input.style.display = "block";
     }
+
+    /**** Cross Fce ****/
+
+    let cross = document.getElementById("cross");
+
+    cross.onclick = function(){
+        insert_input.style.display = "none";
+
+        if(insert_input.style.display == "none") {
+            insert_btn.style.display = "block";
+        }
+    }
 }
+

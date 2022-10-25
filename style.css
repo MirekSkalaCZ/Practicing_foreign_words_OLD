@@ -38,6 +38,8 @@ body {
     cursor: pointer;
 }
 
+
+
 .btn p:hover {
     opacity: 0.7;
     color: orange;
@@ -55,6 +57,24 @@ body {
 
 .input input:focus {
     outline-color: orange;
+}
+
+/**** Cross ****/
+
+.cross p {
+    text-align: right;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.cross p i {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.cross p i:hover {
+    opacity: 0.7;
+    color: orange;
 }
 
 /**** Insert words ****/
@@ -126,6 +146,7 @@ body {
     text-align: center;
     margin-left: 10px;
     cursor: pointer;
+    font-size: 44px;
 }
 
 .icons:hover {
