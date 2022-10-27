@@ -108,39 +108,36 @@ let random_foreign = document.getElementById("random_foreign_word");
 
 let random_native = document.getElementById("random_native_word");
 
-btn_randomize.addEventListener("click", function(){
-    /* Reset values */
-    random_foreign.innerText = "";
-    random_native.innerText = "";
-    /* Generate Random Number */
-    var random_number = Math.ceil((Math.random() * object_length) - 1);   
-    /* Show random word from array */
-    random_foreign.innerText = my_storage_JSON[random_number].foreign;
-    random_native.innerText = my_storage_JSON[random_number].native;
-});
-
-/**** Second Practice ****/
-
-/* Result text */
+/* Result text + second practice */
 let practice_result = document.getElementById("practice_result");
 
 let btn_practice_submit = document.getElementById("btn_practice_submit");
 
 let native_word_practice = document.getElementById("native_word_practice");
 
-btn_practice_submit.addEventListener("click", function(){
-
+btn_randomize.addEventListener("click", function(){
+    /* Reset values */
+    random_foreign.innerText = "";
+    random_native.innerText = "";
+    practice_result.innerHTML = "";
+    native_word_practice.value = "";
     /* Generate Random Number */
-    var random_number = Math.ceil((Math.random() * object_length) - 1);
-    
-    native_word_practice.innerText = "";
+    var random_number = Math.ceil((Math.random() * object_length) - 1);   
+    /* Show random word from array */
+    random_foreign.innerText = my_storage_JSON[random_number].foreign;
+    random_native.innerText = my_storage_JSON[random_number].native;
 
-    if(native_word_practice.value == "pes"){
-        practice_result.innerHTML = "<span class='true'>Správná odpověď</span>";
-    }   else {
-        practice_result.innerHTML = "<span class='false'>Špatná odpověď</span>";
-    }
+    /**** Second Practice ****/
 
+        btn_practice_submit.addEventListener("click", function(){
+                    
+            if(native_word_practice.value == my_storage_JSON[random_number].native){
+                practice_result.innerHTML = "<span class='true'>Správná odpověď</span>";
+            }   else {
+                practice_result.innerHTML = "<span class='false'>Špatná odpověď</span>";
+            }
+            
+        });
 });
 
 /**** Words List ****/

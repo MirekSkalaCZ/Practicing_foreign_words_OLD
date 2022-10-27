@@ -128,7 +128,7 @@ body {
 /* Randomize btn */
 
 .randomize_btn p {
-    margin-bottom: 25px;
+    margin: 35px 0;
     color: black;
     font-size: 25px;
     cursor: pointer;
@@ -188,10 +188,6 @@ body {
 }
 
 /* Second Practice */
-
-.second_practice {
-    margin-top: 65px;
-}
 
 .true {
     color: rgb(22, 196, 22);
