@@ -85,11 +85,11 @@ body {
     margin-top: 250px;
 }
 
-#btn_insert_words {
+#btn1, #btn2, #btn3 {
     display: block;
 }
 
-#input_insert_words {
+#window1, #window2, #window3 {
     display: none;
 }
 

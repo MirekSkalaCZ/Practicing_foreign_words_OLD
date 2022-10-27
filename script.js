@@ -23,54 +23,30 @@ function printText(){
 
 printText();
 
-/**** Insert Words Btn ****/
+/**** Btn - show window */
 
-let insert_btn = document.getElementById("btn_insert_words");
+for( let i = 1; i <= 3; i++ ) {
+    let btn = document.getElementById("btn" + i);
 
-let insert_input = document.getElementById("input_insert_words");
+    let window = document.getElementById("window" + i);
 
-insert_btn.onclick = function(){
-    insert_btn.style.display = "none";
+    btn.onclick = function(){
+    btn.style.display = "none";
 
-    if(insert_btn.style.display == "none") {
-        insert_input.style.display = "block";
+    if(btn.style.display == "none") {
+        window.style.display = "block";
     }
 
     /**** Cross Fce ****/
 
-    let cross = document.getElementById("cross");
+    let cross = document.getElementById("cross" + i);
 
     cross.onclick = function(){
-        insert_input.style.display = "none";
+        window.style.display = "none";
 
-        if(insert_input.style.display == "none") {
-            insert_btn.style.display = "block";
+        if(window.style.display == "none") {
+            btn.style.display = "block";
         }
     }
 }
-
-/**** Practice ****/
-
-let practice_btn = document.getElementById("btn_practice_open");
-
-let practice_window = document.getElementById("practice_window");
-
-practice_btn.onclick = function(){
-    practice_btn.style.display = "none";
-
-    if(practice_btn.style.display == "none") {
-        practice_window.style.display = "block";
-    }
-
-    /**** Cross Fce ****/
-
-    let cross = document.getElementById("cross1");
-
-    cross.onclick = function(){
-        practice_window.style.display = "none";
-
-        if(practice_window.style.display == "none") {
-            practice_btn.style.display = "block";
-        }
-    }
 }
