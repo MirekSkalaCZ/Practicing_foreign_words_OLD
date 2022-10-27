@@ -63,6 +63,7 @@ let foreign_word = [];
 
 let native_word = [];
 
+
 btn1.addEventListener("click", function(){
     /* Add a foreign word to array */
     foreign_word.push(input_foreign.value);
@@ -77,3 +78,21 @@ btn1.addEventListener("click", function(){
 
 
 /**** First Practice ****/
+
+/* Randomize Function */
+
+let array_length = foreign_word.length;     //Could be native_word.length
+
+let btn_randomize = document.getElementById("randomize_btn");
+
+let random_foreign = document.getElementsByClassName("random_foreign_word");
+
+let random_native = document.getElementsByClassName("random_native_word");
+
+btn_randomize.addEventListener("click", function(){
+    /* Generate Random Number */
+    let random_number = Math.ceil(Math.random() * 10);   
+    /* Show random word from array */
+    console.log(random_number);
+
+});
