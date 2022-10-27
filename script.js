@@ -66,7 +66,7 @@ if(localStorage.getItem("practice") == null) {
 }
 
 btn1.addEventListener("click", function(){
-    
+    /* Add values into the array from inputs */
     practice_array.push({
         foreign: foreign_word.value,
         native: native_word.value
@@ -74,7 +74,7 @@ btn1.addEventListener("click", function(){
 
     var practice_arrayJSON = JSON.stringify(practice_array);
     localStorage.setItem("practice", practice_arrayJSON);
-
+    /* Reset values from inputs */
     foreign_word.value = "";
     native_word.value = "";
 
@@ -83,42 +83,34 @@ btn1.addEventListener("click", function(){
 
 /**** First Practice ****/
 
+var my_storage = localStorage.getItem("practice");
+
+var my_storage_JSON = JSON.parse(my_storage);
+
+/* Object Length */
+
+let object_length = my_storage_JSON.length;
+
 /* Randomize Function */
-
-/* Could be native_word_FromLS.length */
-/*
-var array_length = foreign_word_FromLS.length;   
-
-console.log(array_length);
 
 let btn_randomize = document.getElementById("randomize_btn");
 
 let random_foreign = document.getElementsByClassName("random_foreign_word");
 
 let random_native = document.getElementsByClassName("random_native_word");
-
+/*
 btn_randomize.addEventListener("click", function(){
     /* Generate Random Number */
-    /*let random_number = Math.ceil(Math.random() * array_length);   
+    //let random_number = Math.ceil(Math.random() * object_length);   
     /* Show random word from array */
-    /*console.log(random_number);
-
+    //console.log(random_number);
+/*
 });*/
 
 /**** Words List ****/
-/*
-let word_list = document.getElemenetById("list");
 
-let my_storage = localStorage.getItem("practice");
-let my_storage_JSON = JSON.parse(my_storage);
+function createList(){ 
 
-my_storage_JSON.forEach(function(word){
-    word_list.innerHTML = word.foreign + word.native;
-});*/
-
-function myFunction(){
-    let my_storage = localStorage.getItem("practice");
-    let my_storage_JSON = JSON.parse(my_storage);    
     let list = "<table><tr><th>Cizí výraz</th><th>Český výraz</th></tr>"
     for (let x in my_storage_JSON) {
         list += "<tr><td>" + my_storage_JSON[x].foreign + "</td><td>" + my_storage_JSON[x].native + "</td></tr>";
@@ -126,9 +118,10 @@ function myFunction(){
     list += "</table>"
 
     document.getElementById("list").innerHTML = list;
+
 };
 
-myFunction();
+createList();
 
 /* List Refresh */
 
@@ -139,3 +132,4 @@ refresh_btn.addEventListener("click", function(){
     location.reload();
 
 });
+

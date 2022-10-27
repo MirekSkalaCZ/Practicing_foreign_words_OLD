@@ -75,6 +75,8 @@ body {
     color: orange;
 }
 
+/****************************************************/
+
 /**** Insert words ****/
 
 .insert_words {
@@ -90,6 +92,8 @@ body {
 #window1, #window2, #window3 {
     display: none;
 }
+
+/****************************************************/
 
 /**** Practice ****/
 
@@ -173,6 +177,8 @@ body {
     transform: rotateX(180deg);
 }
 
+/****************************************************/
+
 /**** Word List ****/
 
 .word_list {
@@ -209,6 +215,8 @@ body {
 #list tr:hover {
     background-color: orange;
 }
+
+/****************************************************/
 
 /**** Footer ****/
 
