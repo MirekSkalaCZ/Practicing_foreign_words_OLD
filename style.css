@@ -109,6 +109,11 @@ body {
     display: none;
 }
 
+.practice h2 {
+    margin-bottom: 35px;
+}
+
+
 /* First Practice */
 
 .flip_box {
