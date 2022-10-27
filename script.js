@@ -68,21 +68,54 @@ btn1.addEventListener("click", function(){
     /* Add a foreign word to array */
     foreign_word.push(input_foreign.value);
     console.log(foreign_word);
+    /* Add to Local Storage */
+    let foreign_word_ToLS = JSON.stringify(foreign_word);
+    localStorage.setItem("Foreign Words", foreign_word_ToLS);
     input_foreign.value = "";
+    let foreign_word_FromLS = JSON.parse(foreign_word_ToLS);
 
     /* Add a native word to array */
     native_word.push(input_native.value);
     console.log(native_word);
+    /* Add to Local Storage */
+    let native_word_ToLS = JSON.stringify(native_word);
+    localStorage.setItem("Native Words", native_word_ToLS);
     input_native.value = "";
+    let native_word_FromLS = JSON.parse(native_word_ToLS);  
+
+    /* Could be native_word_FromLS.length */
+
+    var array_length = foreign_word_FromLS.length;   
+
+    /**** First Practice ****/
+
+    /* Randomize Function */
+
+    let btn_randomize = document.getElementById("randomize_btn");
+
+    let random_foreign = document.getElementsByClassName("random_foreign_word");
+
+    let random_native = document.getElementsByClassName("random_native_word");
+
+    btn_randomize.addEventListener("click", function(){
+        /* Generate Random Number */
+        /*let random_number = Math.ceil(Math.random() * array_length);   
+        /* Show random word from array */
+        /*random_foreign.innerHTML = foreign_word_FromLS[random_number];
+        /* Show random word from array */
+        /*random_native.innerHTML = native_word_FromLS[random_number];*/
+        for( let x = 0; x < array_length; x++ ) {
+            
+        }
+    });
+
 });
 
 
 /**** First Practice ****/
 
 /* Randomize Function */
-
-let array_length = foreign_word.length;     //Could be native_word.length
-
+/*
 let btn_randomize = document.getElementById("randomize_btn");
 
 let random_foreign = document.getElementsByClassName("random_foreign_word");
@@ -90,9 +123,9 @@ let random_foreign = document.getElementsByClassName("random_foreign_word");
 let random_native = document.getElementsByClassName("random_native_word");
 
 btn_randomize.addEventListener("click", function(){
-    /* Generate Random Number */
-    let random_number = Math.ceil(Math.random() * 10);   
+    /* Generate Random Number *//*
+    let random_number = Math.ceil(Math.random() * array_length);   
     /* Show random word from array */
-    console.log(random_number);
+    /*console.log(random_number);
 
-});
+});*/
