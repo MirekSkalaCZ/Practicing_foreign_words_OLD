@@ -77,6 +77,7 @@ btn1.addEventListener("click", function(){
 
     foreign_word.value = "";
     native_word.value = "";
+
 });
 
 
@@ -104,3 +105,27 @@ btn_randomize.addEventListener("click", function(){
 
 });*/
 
+/**** Words List ****/
+/*
+let word_list = document.getElemenetById("list");
+
+let my_storage = localStorage.getItem("practice");
+let my_storage_JSON = JSON.parse(my_storage);
+
+my_storage_JSON.forEach(function(word){
+    word_list.innerHTML = word.foreign + word.native;
+});*/
+
+function myFunction(){
+    let my_storage = localStorage.getItem("practice");
+    let my_storage_JSON = JSON.parse(my_storage);    
+    let list = "<table>"
+    for (let x in my_storage_JSON) {
+        list += "<tr><td>" + my_storage_JSON[x].foreign + "</td><td>" + my_storage_JSON[x].native + "</td></tr>";
+    }
+    list += "</table>"
+
+    document.getElementById("list").innerHTML = list;
+};
+
+myFunction();

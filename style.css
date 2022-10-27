@@ -181,6 +181,29 @@ body {
     margin-top: 250px;
 }
 
+/* List */
+
+#list {
+    position: relative;
+}
+
+#list table {
+    text-align: center;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+#list td {
+    border: 3px solid orange;
+    padding: 10px 15px;
+    cursor: pointer;
+    min-width: 250px;
+}
+
+#list tr:hover {
+    background-color: orange;
+}
+
 /**** Footer ****/
 
 .footer_section {
