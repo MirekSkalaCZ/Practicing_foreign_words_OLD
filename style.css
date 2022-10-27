@@ -128,7 +128,7 @@ body {
 /* Randomize btn */
 
 .randomize_btn p {
-    margin-top: 25px;
+    margin-bottom: 25px;
     color: black;
     font-size: 25px;
     cursor: pointer;
@@ -185,6 +185,20 @@ body {
     background-color: orange;
     color: black;
     transform: rotateX(180deg);
+}
+
+/* Second Practice */
+
+.second_practice {
+    margin-top: 65px;
+}
+
+.true {
+    color: rgb(22, 196, 22);
+}
+
+.false {
+    color: rgb(253, 21, 21);
 }
 
 /****************************************************/

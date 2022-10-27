@@ -113,11 +113,34 @@ btn_randomize.addEventListener("click", function(){
     random_foreign.innerText = "";
     random_native.innerText = "";
     /* Generate Random Number */
-    let random_number = Math.ceil((Math.random() * object_length) - 1);   
+    var random_number = Math.ceil((Math.random() * object_length) - 1);   
     /* Show random word from array */
     random_foreign.innerText = my_storage_JSON[random_number].foreign;
     random_native.innerText = my_storage_JSON[random_number].native;
-    console.log(random_number);
+});
+
+/**** Second Practice ****/
+
+/* Result text */
+let practice_result = document.getElementById("practice_result");
+
+let btn_practice_submit = document.getElementById("btn_practice_submit");
+
+let native_word_practice = document.getElementById("native_word_practice");
+
+btn_practice_submit.addEventListener("click", function(){
+
+    /* Generate Random Number */
+    var random_number = Math.ceil((Math.random() * object_length) - 1);
+    
+    native_word_practice.innerText = "";
+
+    if(native_word_practice.value == "pes"){
+        practice_result.innerHTML = "<span class='true'>Správná odpověď</span>";
+    }   else {
+        practice_result.innerHTML = "<span class='false'>Špatná odpověď</span>";
+    }
+
 });
 
 /**** Words List ****/
