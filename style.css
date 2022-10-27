@@ -75,6 +75,19 @@ body {
     color: orange;
 }
 
+/**** Btns ****/
+
+#btn1, #btn2, #btn3 {
+    display: block;
+}
+
+/**** Windows ****/
+
+#window1, #window2, #window3 {
+    display: none;
+}
+
+
 /****************************************************/
 
 /**** Insert words ****/
@@ -85,12 +98,9 @@ body {
     margin-top: 250px;
 }
 
-#btn1, #btn2, #btn3 {
-    display: block;
-}
-
-#window1, #window2, #window3 {
-    display: none;
+#confirm_text {
+    padding-top: 15px;
+    color: orange;
 }
 
 /****************************************************/

@@ -59,6 +59,8 @@ let input_foreign = document.getElementById("foreign_word");
 
 let input_native = document.getElementById("native_word");
 
+let confirm_text = document.getElementById("confirm_text");
+
 if(localStorage.getItem("practice") == null) {
     var practice_array = [];
 }   else {
@@ -74,6 +76,13 @@ btn1.addEventListener("click", function(){
 
     var practice_arrayJSON = JSON.stringify(practice_array);
     localStorage.setItem("practice", practice_arrayJSON);
+
+    /* Confirm Text and Timer */
+    confirm_text.textContent = "Slova se uložila, můžete přidat další";
+    setTimeout(function(){
+        confirm_text.textContent = "";
+    }, 1500);
+
     /* Reset values from inputs */
     foreign_word.value = "";
     native_word.value = "";
@@ -95,17 +104,21 @@ let object_length = my_storage_JSON.length;
 
 let btn_randomize = document.getElementById("randomize_btn");
 
-let random_foreign = document.getElementsByClassName("random_foreign_word");
+let random_foreign = document.getElementById("random_foreign_word");
 
-let random_native = document.getElementsByClassName("random_native_word");
-/*
+let random_native = document.getElementById("random_native_word");
+
 btn_randomize.addEventListener("click", function(){
+    /* Reset values */
+    random_foreign.innerText = "";
+    random_native.innerText = "";
     /* Generate Random Number */
-    //let random_number = Math.ceil(Math.random() * object_length);   
+    let random_number = Math.ceil((Math.random() * object_length) - 1);   
     /* Show random word from array */
-    //console.log(random_number);
-/*
-});*/
+    random_foreign.innerText = my_storage_JSON[random_number].foreign;
+    random_native.innerText = my_storage_JSON[random_number].native;
+    console.log(random_number);
+});
 
 /**** Words List ****/
 
