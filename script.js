@@ -119,7 +119,7 @@ my_storage_JSON.forEach(function(word){
 function myFunction(){
     let my_storage = localStorage.getItem("practice");
     let my_storage_JSON = JSON.parse(my_storage);    
-    let list = "<table>"
+    let list = "<table><tr><th>Cizí výraz</th><th>Český výraz</th></tr>"
     for (let x in my_storage_JSON) {
         list += "<tr><td>" + my_storage_JSON[x].foreign + "</td><td>" + my_storage_JSON[x].native + "</td></tr>";
     }
@@ -129,3 +129,13 @@ function myFunction(){
 };
 
 myFunction();
+
+/* List Refresh */
+
+let refresh_btn = document.getElementById("refresh_btn");
+
+refresh_btn.addEventListener("click", function(){
+    
+    location.reload();
+
+});

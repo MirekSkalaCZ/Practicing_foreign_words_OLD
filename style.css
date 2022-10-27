@@ -191,12 +191,18 @@ body {
     text-align: center;
     margin: 0 auto;
     border-collapse: collapse;
+    cursor: pointer;
+}
+
+#list th {
+    border: 3px solid black;
+    padding: 10px 15px;
+    background-color: orange;
 }
 
 #list td {
     border: 3px solid orange;
     padding: 10px 15px;
-    cursor: pointer;
     min-width: 250px;
 }
 
