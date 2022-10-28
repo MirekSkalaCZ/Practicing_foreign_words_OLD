@@ -114,8 +114,16 @@ let practice_result = document.getElementById("practice_result");
 let btn_practice_submit = document.getElementById("btn_practice_submit");
 
 let native_word_practice = document.getElementById("native_word_practice");
+/* Score */
+var round_count = 0;
+
+var score = 0;
+
+var percents = 0;
 
 btn_randomize.addEventListener("click", function(){
+    /* Add round value + 1 */
+    round_count++;
     /* Reset values */
     random_foreign.innerText = "";
     random_native.innerText = "";
@@ -130,13 +138,22 @@ btn_randomize.addEventListener("click", function(){
     /**** Second Practice ****/
 
         btn_practice_submit.addEventListener("click", function(){
-                    
+            
             if(native_word_practice.value == my_storage_JSON[random_number].native){
                 practice_result.innerHTML = "<span class='true'>Správná odpověď</span>";
+                score++;
             }   else {
                 practice_result.innerHTML = "<span class='false'>Špatná odpověď</span>";
             }
-            
+
+            document.getElementById("round_count").innerText = round_count;
+
+            document.getElementById("score").innerText = score;
+
+            percents = score * 100 / round_count;
+            let rounded = percents.toFixed(1);
+
+            document.getElementById("percents").innerText = rounded;
         });
 });
 
