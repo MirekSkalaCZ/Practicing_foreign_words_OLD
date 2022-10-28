@@ -27,6 +27,27 @@ body {
     font-size: 35px;
 }
 
+/* Change Language + Dark mode */
+
+#language {
+    text-align: right;
+    margin-top: 25px;
+}
+
+#language figcaption {
+    margin-right: 15px;
+}
+
+#language img {
+    position: absolute;
+    width: 25px;
+    top: 20px;
+}
+
+#language img:hover {
+    opacity: 0.7;
+}
+
 /****************************************************/
 
 /**** Btns styles ****/
@@ -258,6 +279,10 @@ body {
 
 .footer_text a:hover {
     color: orange;
+}
+
+.footer_text a:focus {
+    outline: none;
 }
 
 .footer_text p {

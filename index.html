@@ -12,6 +12,10 @@
 
     <header>
         <div class="container">
+            <div id="language">
+                <figcaption>Změna jazyka</figcaption>
+                <a href="#"><img src="images/gb_flag.png" alt="change language"></a>
+            </div>
             <!-- Welcome text -->
             <div class="welcome_text">
                 <h1 id="text"></h1>
@@ -50,7 +54,12 @@
                         <div class="cross">
                             <p><i class="fa-solid fa-xmark" id="cross2"></i></p>
                         </div>
-                        
+                        <!-- Score -->
+                        <div class="total_score">
+                            <p id="score"></p>
+                        </div>
+
+                        <!-- First Practice -->
                         <div class="first_practice">
                             <div class="flip_box">
                                 <div class="flip_box_inner">
@@ -68,6 +77,7 @@
                             <p id="randomize_btn">Ukaž slovo</p>
                         </div>
 
+                        <!-- Second Practice -->
                         <div class="second_practice input">
                             <p id="practice_result"></p>
                             <input type="text"  name="native_word_practice" id="native_word_practice" placeholder="Napište český překlad">
