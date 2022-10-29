@@ -83,6 +83,10 @@ body {
 
 /**** Cross ****/
 
+.cross {
+    margin-right: 10px;
+}
+
 .cross p {
     text-align: right;
     margin-top: 5%;
@@ -178,7 +182,7 @@ body {
     border: 1px solid grey;
     perspective: 1000px;
     cursor: pointer;
-    margin-left: 35%;
+    margin: 0 auto;
 }
 
 .flip_box_inner {

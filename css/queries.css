@@ -1,0 +1,16 @@
+@media screen and (max-width: 1150px) {
+    .icon_flag {
+        right: 20px;
+    }
+
+    .language figcaption {
+        margin-right: 50px;
+    }
+
+}
+
+@media screen and (max-width: 520px) {
+    #list td {
+        min-width: 150px;
+    }
+}
