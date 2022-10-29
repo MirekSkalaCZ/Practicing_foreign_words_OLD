@@ -8,4 +8,12 @@
     #list td {
         min-width: 150px;
     }
+
+    .welcome_text {
+        position: absolute;
+    }
+
+    .insert_words {
+        margin-top: 350px;
+    }
 }
