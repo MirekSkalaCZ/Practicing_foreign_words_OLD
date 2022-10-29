@@ -79,7 +79,7 @@ btn1.addEventListener("click", function(){
     localStorage.setItem("practice", practice_arrayJSON);
 
     /* Confirm Text and Timer */
-    confirm_text.textContent = "Slova se uložila, můžete přidat další";
+    confirm_text.textContent = "The words have been saved, you can add more";
     setTimeout(function(){
         confirm_text.textContent = "";
     }, 1500);
