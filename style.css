@@ -6,6 +6,7 @@
 
 body {
     font-family: 'Courier New', Courier, monospace;
+    background-color: var(--primary-color-background);
 }
 
 .container {
@@ -21,6 +22,7 @@ body {
     position: relative;
     text-align: center;
     margin-top: 150px;
+    color: var(--primary-color-text);
 }
 
 .welcome_text h1 {
@@ -36,14 +38,8 @@ body {
     margin-top: 25px;
 }
 
-.language figcaption {
-    margin-right: 15px;
-}
-
 .icon_flag {
-    position: absolute;
-    width: 25px;
-    top: 20px;
+    max-width: 25px;
     cursor: pointer;
 }
 
@@ -51,13 +47,44 @@ body {
     opacity: 0.7;
 }
 
+/* Dark mode */
+
+#icon_dm {
+    max-width: 25px;
+    cursor: pointer;
+}
+
+#icon_dm:hover {
+    opacity: 0.7;
+}
+
+:root {
+    --primary-color-text: black;
+    --secondary-color-text: white;
+    --primary-color-background: whitesmoke;
+    --secondary-color-background: rgb(39,38,39);
+}
+
+.dark_theme {
+    --primary-color-text: white;
+    --secondary-color-text: black;
+    --primary-color-background: rgb(39,38,39);
+    --secondary-color-background: whitesmoke;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
 /****************************************************/
 
 /**** Btns styles ****/
 
 .btn p {
     margin-top: 25px;
-    color: black;
+    color: var(--primary-color-text);
     font-size: 25px;
     cursor: pointer;
 }
@@ -96,6 +123,7 @@ body {
 .cross p i {
     font-size: 30px;
     cursor: pointer;
+    color: var(--primary-color-text);
 }
 
 .cross p i:hover {
@@ -157,13 +185,14 @@ body {
 
 .total_score p {
     margin-bottom: 10px;
+    color: var(--primary-color-text);
 }
 
 /* Randomize btn */
 
 .randomize_btn p {
     margin: 35px 0;
-    color: black;
+    color: var(--primary-color-text);
     font-size: 25px;
     cursor: pointer;
 }
@@ -252,10 +281,11 @@ body {
     margin: 0 auto;
     border-collapse: collapse;
     cursor: pointer;
+    color: var(--primary-color-text);
 }
 
 #list th {
-    border: 3px solid black;
+    border: 3px solid var(--primary-color-text);
     padding: 10px 15px;
     background-color: orange;
 }
@@ -286,7 +316,7 @@ body {
 
 .footer_text a {
     text-decoration: none;
-    color: black;
+    color: var(--primary-color-text);
     cursor: pointer;
 }
 
@@ -298,16 +328,17 @@ body {
     outline: none;
 }
 
-.footer_text p {
+.footer_text {
     margin-top: 10px;
+    color: var(--primary-color-text);
 }
 
 .icons {
     text-align: center;
     padding: 11px 14px;
-    background: black;
+    background: var(--primary-color-text);
     border-radius: 50px;
-    color: white;
+    color: var(--secondary-color-text);
     width: 65px;
     height: 65px;
     text-align: center;

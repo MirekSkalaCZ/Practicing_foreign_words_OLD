@@ -1,12 +1,7 @@
 @media screen and (max-width: 1150px) {
-    .icon_flag {
-        right: 20px;
+    #icon_dm {
+        margin-right: 15px;
     }
-
-    .language figcaption {
-        margin-right: 50px;
-    }
-
 }
 
 @media screen and (max-width: 520px) {
