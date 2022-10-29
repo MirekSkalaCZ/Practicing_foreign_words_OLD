@@ -146,6 +146,12 @@ body {
     margin-bottom: 35px;
 }
 
+/* Score */
+
+.total_score p {
+    margin-bottom: 10px;
+}
+
 /* Randomize btn */
 
 .randomize_btn p {
