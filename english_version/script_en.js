@@ -3,7 +3,7 @@
 
 const heading = document.getElementById("text");
 
-const text = "Procvičování cizích slov";
+const text = "Practicing foreign words";
 
 let idLetter = 1;
 
@@ -141,10 +141,10 @@ btn_randomize.addEventListener("click", function(){
         btn_practice_submit.addEventListener("click", function(){
             
             if(native_word_practice.value == my_storage_JSON[random_number].native){
-                practice_result.innerHTML = "<span class='true'>Správná odpověď</span>";
+                practice_result.innerHTML = "<span class='true'>Right answer</span>";
                 score++;
             }   else {
-                practice_result.innerHTML = "<span class='false'>Špatná odpověď</span>";
+                practice_result.innerHTML = "<span class='false'>Wrong answer</span>";
             }
 
             document.getElementById("round_count").innerText = round_count;
@@ -162,7 +162,7 @@ btn_randomize.addEventListener("click", function(){
 
 function createList(){ 
 
-    let list = "<table><tr><th>Cizí výraz</th><th>Český výraz</th></tr>"
+    let list = "<table><tr><th>Foreign words</th><th>Native words</th></tr>"
     for (let x in my_storage_JSON) {
         list += "<tr><td>" + my_storage_JSON[x].foreign + "</td><td>" + my_storage_JSON[x].native + "</td></tr>";
     }

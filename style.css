@@ -27,24 +27,27 @@ body {
     font-size: 35px;
 }
 
-/* Change Language + Dark mode */
+/**** Change Language + Dark mode ****/
 
-#language {
+/* Icons */
+
+.language {
     text-align: right;
     margin-top: 25px;
 }
 
-#language figcaption {
+.language figcaption {
     margin-right: 15px;
 }
 
-#language img {
+.icon_flag {
     position: absolute;
     width: 25px;
     top: 20px;
+    cursor: pointer;
 }
 
-#language img:hover {
+.icon_flag:hover {
     opacity: 0.7;
 }
 

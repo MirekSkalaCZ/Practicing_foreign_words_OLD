@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Procvičování cizích slov</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Practicing foreign words</title>
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
@@ -13,8 +13,8 @@
     <header>
         <div class="container">
             <div class="language">
-                <figcaption>Změna jazyka</figcaption>
-                <a href="english_version/index_en.html"><img src="images/gb_flag.png"class="icon_flag"></a> 
+                <figcaption>Change language</figcaption>
+                <a href="../index.html"><img src="../images/czech_flag.png" class="icon_flag"></a>
             </div>
             <!-- Welcome text -->
             <div class="welcome_text">
@@ -29,17 +29,17 @@
                 <!-- Insert Foreign a Native words -->
                 <div class="insert_words">
                     <div class="btn">
-                        <p id="btn1">Vložit slovo</p>
+                        <p id="btn1">Add word</p>
                     </div>
                     <div class="input">
                         <div id="window1">
                             <div class="cross">
                                 <p><i class="fa-solid fa-xmark" id="cross1"></i></p>
                             </div>
-                            <input type="text" name="foreign_word" id="foreign_word" placeholder="Napište cizí slovo">
-                            <input type="text" name="native_word" id="native_word" placeholder="Napište český překlad">
+                            <input type="text" name="foreign_word" id="foreign_word" placeholder="Write a foreign word">
+                            <input type="text" name="native_word" id="native_word" placeholder="Write a native word">
                             <div class="btn">
-                                <p id="btn_insert_submit">Odeslat</p>
+                                <p id="btn_insert_submit">Submit</p>
                             </div>
                             <p id="confirm_text"></p>
                         </div>
@@ -48,7 +48,7 @@
                 <!-- Practice section -->
                 <div class="practice">
                     <div class="btn">
-                        <p id="btn2">Začni procvičovat</p>
+                        <p id="btn2">Start practicing</p>
                     </div>
                     <div id="window2">
                         <div class="cross">
@@ -74,15 +74,15 @@
                         </div>
 
                         <div class="randomize_btn">
-                            <p id="randomize_btn">Ukaž slovo</p>
+                            <p id="randomize_btn">Show the word</p>
                         </div>
 
                         <!-- Second Practice -->
                         <div class="second_practice input">
                             <p id="practice_result"></p>
-                            <input type="text"  name="native_word_practice" id="native_word_practice" placeholder="Napište český překlad">
+                            <input type="text"  name="native_word_practice" id="native_word_practice" placeholder="Write a native word">
                             <div class="btn">
-                                <p id="btn_practice_submit">Odeslat</p>
+                                <p id="btn_practice_submit">Submit</p>
                             </div>
                         </div>
 
@@ -91,7 +91,7 @@
                 <!-- Word List -->
                 <div class="word_list">
                     <div class="btn">
-                        <p id="btn3">Seznam slov</p>
+                        <p id="btn3">List of words</p>
                     </div>
                     <div id="window3">
                         <div class="cross">
@@ -101,7 +101,8 @@
                             <p id="list"></p>
                         </div>
                         <div class="btn">
-                            <p id="refresh_btn">Aktualizuj seznam</p>
+                            <p id="refresh_btn">
+                                Update the list</p>
                         </div>
                     </div>
                 </div>
@@ -112,7 +113,7 @@
     <footer>
         <div class="container footer_section">
             <div class="social">
-                <p class="footer_text"><span>Více informací na mých sociálních stránkách:</span></p>
+                <p class="footer_text"><span>More information on my social pages:</span></p>
                 <br>
                 <a href="https://www.facebook.com/mira.skala/" target="_blank"><i class="fa-brands fa-square-facebook icons"></i></a>
                 
@@ -120,16 +121,16 @@
             </div>
             <br>
             <div class="footer_text">
-                <p><span>Kontakt:</span></p>
+                <p><span>Contact:</span></p>
                 <a href="mailto:mirek.skala@seznam.cz">E-Mail</a>
                 <br>
-                <p><span>Webová stránka:</span></p>
+                <p><span>Web page:</span></p>
                 <a href="https://motyli-prahy.cz" target="_blank">Motýli Prahy</a>
                 <p>Copyright &copy; 2022 Miroslav Skála. All rights reserved</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script_en.js"></script>
 </body>
 </html>
