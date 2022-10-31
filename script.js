@@ -212,3 +212,4 @@ refresh_btn.addEventListener("click", function(){
 
 });
 
+/* Sending values by enter */
