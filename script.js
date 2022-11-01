@@ -141,6 +141,9 @@ let random_native = document.getElementById("random_native_word");
 let practice_result = document.getElementById("practice_result");
 
 let practice_form = document.getElementById("practice_form");
+
+let native_word_practice = document.getElementById("native_word_practice");
+
 /* Score */
 
 var round_count = 0;
@@ -164,27 +167,27 @@ btn_randomize.addEventListener("click", function(){
     random_native.innerText = my_storage_JSON[random_number].native;
 
     /**** Second Practice ****/
+    practice_form.addEventListener("submit", function(e){
 
-        practice_form.addEventListener("submit", function(e){
+        e.preventDefault();
+
+        if(native_word_practice.value == my_storage_JSON[random_number].native){
+            practice_result.innerHTML = "<span class='true'>Správná odpověď</span>";
+            score++;
+        }   else {
+            practice_result.innerHTML = "<span class='false'>Špatná odpověď</span>";
+        }
+
+        document.getElementById("round_count").innerText = round_count;
+
+        document.getElementById("score").innerText = score;
+
+        percents = score * 100 / round_count;
+        let rounded = percents.toFixed(1);
+
+        document.getElementById("percents").innerText = rounded;
             
-            e.preventDefault();
-
-            if(native_word_practice.value == my_storage_JSON[random_number].native){
-                practice_result.innerHTML = "<span class='true'>Správná odpověď</span>";
-                score++;
-            }   else {
-                practice_result.innerHTML = "<span class='false'>Špatná odpověď</span>";
-            }
-
-            document.getElementById("round_count").innerText = round_count;
-
-            document.getElementById("score").innerText = score;
-
-            percents = score * 100 / round_count;
-            let rounded = percents.toFixed(1);
-
-            document.getElementById("percents").innerText = rounded;
-        });
+        });  
 });
 
 /**** Words List ****/
@@ -212,5 +215,3 @@ refresh_btn.addEventListener("click", function(){
     location.reload();
 
 });
-
-/* Sending values by enter */
