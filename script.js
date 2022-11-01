@@ -82,13 +82,9 @@ for( let i = 1; i <= 3; i++ ) {
 
 /**** Input Values ****/
 
-let btn1 = document.getElementById("btn_insert_submit");
-
-let input_foreign = document.getElementById("foreign_word");
-
-let input_native = document.getElementById("native_word");
-
 let confirm_text = document.getElementById("confirm_text");
+
+let insert_form = document.getElementById("insert_form");
 
 if(localStorage.getItem("practice") == null) {
     var practice_array = [];
@@ -96,7 +92,10 @@ if(localStorage.getItem("practice") == null) {
     practice_array = JSON.parse(localStorage.getItem("practice"));
 }
 
-btn1.addEventListener("click", function(){
+insert_form.addEventListener("submit", function(e){
+    
+    e.preventDefault();
+    
     /* Add values into the array from inputs */
     practice_array.push({
         foreign: foreign_word.value,
@@ -138,12 +137,12 @@ let random_foreign = document.getElementById("random_foreign_word");
 let random_native = document.getElementById("random_native_word");
 
 /* Result text + second practice */
+
 let practice_result = document.getElementById("practice_result");
 
-let btn_practice_submit = document.getElementById("btn_practice_submit");
-
-let native_word_practice = document.getElementById("native_word_practice");
+let practice_form = document.getElementById("practice_form");
 /* Score */
+
 var round_count = 0;
 
 var score = 0;
@@ -166,8 +165,10 @@ btn_randomize.addEventListener("click", function(){
 
     /**** Second Practice ****/
 
-        btn_practice_submit.addEventListener("click", function(){
+        practice_form.addEventListener("submit", function(e){
             
+            e.preventDefault();
+
             if(native_word_practice.value == my_storage_JSON[random_number].native){
                 practice_result.innerHTML = "<span class='true'>Správná odpověď</span>";
                 score++;

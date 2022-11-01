@@ -85,11 +85,24 @@ body {
 .btn p {
     margin-top: 25px;
     color: var(--primary-color-text);
-    font-size: 25px;
+    font-size: 20px;
     cursor: pointer;
 }
 
 .btn p:hover {
+    opacity: 0.7;
+    color: orange;
+}
+
+.btn input {
+    margin-top: 25px;
+    color: var(--primary-color-text);
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.btn input:hover {
     opacity: 0.7;
     color: orange;
 }
@@ -193,7 +206,7 @@ body {
 .randomize_btn p {
     margin: 35px 0;
     color: var(--primary-color-text);
-    font-size: 25px;
+    font-size: 20px;
     cursor: pointer;
 }
 

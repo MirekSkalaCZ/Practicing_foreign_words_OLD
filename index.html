@@ -38,11 +38,13 @@
                             <div class="cross">
                                 <p><i class="fa-solid fa-xmark" id="cross1"></i></p>
                             </div>
-                            <input type="text" name="foreign_word" id="foreign_word" placeholder="Napište cizí slovo">
-                            <input type="text" name="native_word" id="native_word" placeholder="Napište český překlad">
-                            <div class="btn">
-                                <p id="btn_insert_submit">Odeslat</p>
-                            </div>
+                            <form id="insert_form">
+                                <input type="text" name="foreign_word" id="foreign_word" placeholder="Napište cizí slovo" required>
+                                <input type="text" name="native_word" id="native_word" placeholder="Napište český překlad" required>
+                                <div class="btn">
+                                    <input type="submit" id="btn_insert_submit" value="Odeslat">
+                                </div>
+                            </form>
                             <p id="confirm_text"></p>
                         </div>
                     </div>
@@ -82,10 +84,12 @@
                         <!-- Second Practice -->
                         <div class="second_practice input">
                             <p id="practice_result"></p>
-                            <input type="text"  name="native_word_practice" id="native_word_practice" placeholder="Napište český překlad">
-                            <div class="btn">
-                                <p id="btn_practice_submit">Odeslat</p>
-                            </div>
+                            <form id="practice_form">
+                                <input type="text"  name="native_word_practice" id="native_word_practice" placeholder="Napište český překlad">
+                                <div class="btn">
+                                    <input type="submit" id="btn_practice_submit" value="Odeslat">
+                                </div>
+                            </form>
                         </div>
 
                     </div>
