@@ -287,6 +287,8 @@ body {
 
 #list {
     position: relative;
+    /*max-height: 350px;
+    overflow-y: scroll;*/
 }
 
 #list table {
@@ -313,6 +315,24 @@ body {
     background-color: orange;
 }
 
+/* scrollbar styles */
+/*
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: grey;
+}
+
+::-webkit-scrollbar-thumb {
+    background: orange;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    opacity: 0.7;
+}
+*/
 /****************************************************/
 
 /**** Footer ****/
@@ -344,24 +364,6 @@ body {
 .footer_text {
     margin-top: 10px;
     color: var(--primary-color-text);
-}
-
-.icons {
-    text-align: center;
-    padding: 11px 14px;
-    background: var(--primary-color-text);
-    border-radius: 50px;
-    color: var(--secondary-color-text);
-    width: 65px;
-    height: 65px;
-    text-align: center;
-    margin-left: 10px;
-    cursor: pointer;
-    font-size: 44px;
-}
-
-.icons:hover {
-    background: orange;
 }
 
 .copyright {

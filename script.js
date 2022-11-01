@@ -196,7 +196,7 @@ function createList(){
 
     let list = "<table><tr><th>Cizí výraz</th><th>Český výraz</th></tr>"
     for (let x in my_storage_JSON) {
-        list += "<tr><td>" + my_storage_JSON[x].foreign + "</td><td>" + my_storage_JSON[x].native + "</td></tr>";
+        list += "<tr class='one_line" + x + "'><td>" + my_storage_JSON[x].foreign + "</td><td>" + my_storage_JSON[x].native + "</td></tr>";
     }
     list += "</table>"
 
@@ -215,3 +215,16 @@ refresh_btn.addEventListener("click", function(){
     location.reload();
 
 });
+
+/**** Remove words from JSON ****/
+
+function removeJSON() {
+
+    for(let i; i = 0; i < my_storage_JSON.length) {
+        var one_line = document.getElementsByClassName("one_line" + i);
+    }
+
+    one_line.addEventListener("click", function(){
+        
+    });
+}
