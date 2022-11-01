@@ -299,6 +299,10 @@ body {
     color: var(--primary-color-text);
 }
 
+.th_style {
+    min-width: 250px;
+}
+
 #list th {
     border: 3px solid var(--primary-color-text);
     padding: 10px 15px;
@@ -306,13 +310,15 @@ body {
 }
 
 #list td {
-    border: 3px solid orange;
     padding: 10px 15px;
-    min-width: 250px;
 }
 
 #list tr:hover {
     background-color: orange;
+}
+
+#remove_word {
+    margin-top: 50px;
 }
 
 /* scrollbar styles */

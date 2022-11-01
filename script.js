@@ -194,9 +194,9 @@ btn_randomize.addEventListener("click", function(){
 
 function createList(){ 
 
-    let list = "<table><tr><th>Cizí výraz</th><th>Český výraz</th></tr>"
+    let list = "<table><tr><th>Pořadí</th><th class='th_style'>Cizí výraz</th><th class='th_style'>Český výraz</th></tr>"
     for (let x in my_storage_JSON) {
-        list += "<tr class='one_line" + x + "'><td>" + my_storage_JSON[x].foreign + "</td><td>" + my_storage_JSON[x].native + "</td></tr>";
+        list += "<tr><td>" + x + "</td><td>" + my_storage_JSON[x].foreign + "</td><td>" + my_storage_JSON[x].native + "</td></tr>";
     }
     list += "</table>"
 
@@ -217,7 +217,7 @@ refresh_btn.addEventListener("click", function(){
 });
 
 /**** Remove words from JSON ****/
-
+/*
 function removeJSON() {
 
     for(let i; i = 0; i < my_storage_JSON.length) {
@@ -228,3 +228,18 @@ function removeJSON() {
         
     });
 }
+
+add class <tr class='one_line" + x + "'><td>
+*/
+
+let remove_word = document.getElementById("remove_word");
+
+remove_word.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let x = remove_word_input.value;
+    
+    delete my_storage_JSON[x];
+    
+    remove_word_input.value = "";
+});
