@@ -194,12 +194,10 @@ btn_randomize.addEventListener("click", function(){
 /**** Words List ****/
 
 function createList(){
-    
-    let newSpan = document.createElement("span").innerHTML = "<i class='fa-solid fa-trash-can one_line'></i>";
 
     let list = "<table><tr><th class='th_style'>Cizí výraz</th><th class='th_style'>Český výraz</th></tr>"
     for (let x in my_storage_JSON) {
-        list += "<tr><td>" + my_storage_JSON[x].foreign + "</td><td>" + my_storage_JSON[x].native + "</td><td>" + newSpan + "</td></tr>";
+        list += "<tr><td>" + my_storage_JSON[x].foreign + "</td><td>" + my_storage_JSON[x].native + "</td><td>" + "</td></tr>";
     }
     list += "</table>"
 
@@ -208,6 +206,8 @@ function createList(){
 };
 
 createList();
+
+/*  + "<i class='fa-solid fa-trash-can one_line' id='remove" + x + "'></i>" */
 
 /* List Refresh */  
 
@@ -219,7 +219,7 @@ refresh_btn.addEventListener("click", function(){
 
 });
 
-/**** Remove words from JSON ****/
+/**** Remove words from JSON - working on ****/
 /*
 const removeWord = function(id){
     const index = my_storage_JSON.findIndex(function(wordToCheck){
@@ -229,20 +229,15 @@ const removeWord = function(id){
     if(index > -1){
         my_storage_JSON.splice(index, 1);
     }
-}
+};
 
-let one_line = document.getElementsByClassName("one_line");
- 
-one_line.addEventListener("click", function(){
-    removeWord(my_storage_JSON.id)
-}); 
-*/
-
-let one_line = document.querySelectorAll(".one_line");
-
-console.log(one_line);
-/*
-one_line.addEventListener("click", function(){
-
-});
+for(i = 0; i < object_length; i++) {
+    let remove = document.getElementById("remove" + i);
+    
+    remove.onclick = function() {
+        removeWord(my_storage_JSON.id);
+        var practice_arrayJSON = JSON.stringify(practice_array);
+        localStorage.setItem("practice", practice_arrayJSON);
+    }
+};
 */
