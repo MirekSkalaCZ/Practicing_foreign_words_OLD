@@ -192,12 +192,14 @@ btn_randomize.addEventListener("click", function(){
 });
 
 /**** Words List ****/
-/*
-function createList(){ 
+
+function createList(){
+    
+    let newSpan = document.createElement("span").innerHTML = "<i class='fa-solid fa-trash-can one_line'></i>";
 
     let list = "<table><tr><th class='th_style'>Cizí výraz</th><th class='th_style'>Český výraz</th></tr>"
     for (let x in my_storage_JSON) {
-        list += "<tr><td>" + my_storage_JSON[x].foreign + "</td><td>" + my_storage_JSON[x].native + "</td><td>" + "<button class='one_line'>Vymaž</button>"  + "</td></tr>";
+        list += "<tr><td>" + my_storage_JSON[x].foreign + "</td><td>" + my_storage_JSON[x].native + "</td><td>" + newSpan + "</td></tr>";
     }
     list += "</table>"
 
@@ -206,13 +208,8 @@ function createList(){
 };
 
 createList();
-*/
 
-
-
-
-
-/* List Refresh */
+/* List Refresh */  
 
 let refresh_btn = document.getElementById("refresh_btn");
 
@@ -223,11 +220,29 @@ refresh_btn.addEventListener("click", function(){
 });
 
 /**** Remove words from JSON ****/
+/*
+const removeWord = function(id){
+    const index = my_storage_JSON.findIndex(function(wordToCheck){
+        return wordToCheck.id === id;
+    });
+
+    if(index > -1){
+        my_storage_JSON.splice(index, 1);
+    }
+}
 
 let one_line = document.getElementsByClassName("one_line");
-
+ 
 one_line.addEventListener("click", function(){
-    console.log("test");
-});
+    removeWord(my_storage_JSON.id)
+}); 
+*/
 
-/*"<i class='fa-solid fa-trash-can one_line' id='" + my_storage_JSON[x].id + "'></i>"*/
+let one_line = document.querySelectorAll(".one_line");
+
+console.log(one_line);
+/*
+one_line.addEventListener("click", function(){
+
+});
+*/
