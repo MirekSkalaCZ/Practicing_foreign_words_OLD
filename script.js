@@ -98,6 +98,7 @@ insert_form.addEventListener("submit", function(e){
     
     /* Add values into the array from inputs */
     practice_array.push({
+        id: uuidv4(),
         foreign: foreign_word.value,
         native: native_word.value
     });
@@ -191,12 +192,12 @@ btn_randomize.addEventListener("click", function(){
 });
 
 /**** Words List ****/
-
+/*
 function createList(){ 
 
-    let list = "<table><tr><th>Pořadí</th><th class='th_style'>Cizí výraz</th><th class='th_style'>Český výraz</th></tr>"
+    let list = "<table><tr><th class='th_style'>Cizí výraz</th><th class='th_style'>Český výraz</th></tr>"
     for (let x in my_storage_JSON) {
-        list += "<tr><td>" + x + "</td><td>" + my_storage_JSON[x].foreign + "</td><td>" + my_storage_JSON[x].native + "</td></tr>";
+        list += "<tr><td>" + my_storage_JSON[x].foreign + "</td><td>" + my_storage_JSON[x].native + "</td><td>" + "<button class='one_line'>Vymaž</button>"  + "</td></tr>";
     }
     list += "</table>"
 
@@ -205,6 +206,11 @@ function createList(){
 };
 
 createList();
+*/
+
+
+
+
 
 /* List Refresh */
 
@@ -217,29 +223,11 @@ refresh_btn.addEventListener("click", function(){
 });
 
 /**** Remove words from JSON ****/
-/*
-function removeJSON() {
 
-    for(let i; i = 0; i < my_storage_JSON.length) {
-        var one_line = document.getElementsByClassName("one_line" + i);
-    }
+let one_line = document.getElementsByClassName("one_line");
 
-    one_line.addEventListener("click", function(){
-        
-    });
-}
-
-add class <tr class='one_line" + x + "'><td>
-*/
-
-let remove_word = document.getElementById("remove_word");
-
-remove_word.addEventListener("submit", function(e){
-    e.preventDefault();
-
-    let x = remove_word_input.value;
-    
-    delete my_storage_JSON[x];
-    
-    remove_word_input.value = "";
+one_line.addEventListener("click", function(){
+    console.log("test");
 });
+
+/*"<i class='fa-solid fa-trash-can one_line' id='" + my_storage_JSON[x].id + "'></i>"*/

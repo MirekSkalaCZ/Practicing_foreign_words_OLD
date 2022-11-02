@@ -295,7 +295,6 @@ body {
     text-align: center;
     margin: 0 auto;
     border-collapse: collapse;
-    cursor: pointer;
     color: var(--primary-color-text);
 }
 
@@ -312,13 +311,15 @@ body {
 #list td {
     padding: 10px 15px;
 }
-
+/*
 #list tr:hover {
     background-color: orange;
 }
-
-#remove_word {
-    margin-top: 50px;
+*/
+#list td i:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    color: orange;
 }
 
 /* scrollbar styles */
